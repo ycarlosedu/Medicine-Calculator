@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Calculadora de Medicamentos</title>
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="styles/reset.css">
+		<link rel="stylesheet" href="styles/main.css">
+
+		<!-- SCRIPTS -->
+		<script src="scripts/theme.js" defer></script>
+
+	</head>
+	<body>   
+		<header>
+			<div class="header__logo">
+				<img class="header__logo-img" src="images/calculator icon.png" alt="Logotipo Caculadora de Medicamentos">
+				<h1 class="header__logo-title">Calculadora de Medicamentos</h1>
+			</div>
+			<div class="header__theme">
+				<p class="header__info-title">Modo Escuro</p>
+				<div class="header__theme-toggle">
+					<input id="switch" type="checkbox" name="theme">
+					<label for="switch"></label>
+				</div>
+			</div>
+		</header>
+		<main>
+			<section id="bg">
+				<div class="ball top"></div>
+				<div class="ball bottom"></div>
+			</section>
+			<section class="main__content">
+					<img class="main__img" src="images/hsc logo.png" alt="Logotipo Hospital Santa Cruz">
+					<form class="main__login" action="calculadora.html">
+						<label for="input-user" class="main__login-info">Usuário</label>
+						<input id ="input-user" type="text" class="main__login-input" placeholder="Insira seu suário">
+						<h2 class="error">Não foi possível conectar-se utilizando este usuário ou senha!</h2>
+						<label for="input-pass" class="main__login-info">Senha</label>
+						<input id="input-pass" type="password" class="main__login-input" placeholder="Insira sua senha">
+						<div class="main__login-error">
+							<img src="images/error icon.png" alt="" class="main__login-error-image">
+							<a href="#" class="main__login-error-link">Algum problema para acessar?</a>
+						</div>
+						<div class="main__login-enter">
+							<button class="main__login-enter-button button">
+							<img class="button-icon" src="images/login.png" alt="">
+							Entrar</button>
+						</div>
+					</form>
+			</section>
+		</main>
+	</body>
+</html>

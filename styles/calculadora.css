@@ -1,0 +1,131 @@
+/* MAIN */
+
+.main__infos-form{
+    display: flex;
+}
+
+.main__infos-form-field{
+    width: 50%;
+}
+
+.main__infos-form-title{
+    color: var(--dark-gray);
+    font-size: 2em;
+    margin-bottom: 0.3em;
+    display: block;
+}
+
+.main__infos-form-options{
+    width: 70%;
+    font-size: 1.75em;
+    margin-bottom: 1em;
+    border-radius: 7px;
+    border: 2px solid var(--gray);
+    color: var(--fonts);
+}
+
+.main__infos-form-inputs{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.error{
+    font-size: 1.2rem;
+}
+
+.main__infos-buttons{
+    width: 60%;
+    margin: 2em auto;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1.5em;
+}
+
+.main__infos-button-calc {
+    width: 30%;
+}
+
+.main__infos-button-history{
+    width: 100%;
+}
+
+/* RESULTADO */
+
+.resultados{
+    display: none;
+}
+
+.resultados.active{
+    display: block;
+}
+
+.resultados__form-title, .resultados__form-registry{
+    font-size: 3em;
+    color: var(--dark-gray);
+    margin: 0.5em 0;
+}
+
+.resultados__form-checkbox{
+    font-size: 2em;
+    line-height: 1.5em;
+    display: block;
+    color: var(--fonts);
+}
+
+.resultados__form-finish{
+    display: flex;
+    align-items: center;
+}
+
+.resultados__form-button{
+    margin: 2em auto;
+    font-size: 1.5em;
+    width: 25%;
+}
+
+@media screen and (max-width:760px){
+    header {
+        flex-direction: column;
+        /* height: 22vh; */
+        margin-bottom: 2em;
+    }
+
+    .header__options{
+        margin-top: 1em;
+    }
+
+    .header__theme{
+        position: initial;
+    }
+
+    .main__infos{
+        flex-direction: column;
+    }
+
+    .main__infos-form{
+        flex-direction: column;
+        box-sizing: border-box;
+    }
+
+    .main__infos-form-field{
+        width: 100%;
+    }
+
+    .main__infos-buttons{
+        flex-direction: column;
+    }
+
+    .main__infos-buttons, .resultados__form-button{
+        width: 100%;
+    }
+
+    .main__infos-button-calc{
+        margin-bottom: 1em;
+    }
+
+    .resultados__form-registry{
+        margin: 0.5em 0.5em;
+    }
+
+}

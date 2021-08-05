@@ -1,0 +1,18 @@
+/* CABEÇALHO GERAL */
+
+.header__configs, .header__logout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 0;
+}
+
+.header__button{
+    border: none;
+    background-color: var(--bg-white);
+}
+
+.header__button-image{
+    width: 30px;
+    background-color: var(--bg-white);
+}

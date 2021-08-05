@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora de Medicamentos</title>
+
+        <!-- CSS -->
+            <link rel="stylesheet" href="styles/reset.css">
+            <link rel="stylesheet" href="styles/main.css">
+            <link rel="stylesheet" href="styles/header.css">
+            <link rel="stylesheet" href="styles/calculadora.css">
+
+        <!-- SCRIPTS -->
+		<script src="scripts/theme.js" defer></script>
+        <script src="scripts/calculator.js" defer></script>
+    
+    </head>
+    <body>
+        <header>
+			<div class="header__logo">
+                <a href="calculadora.html">
+                    <img class="header__logo-img" src="images/calculator icon.png" alt="Logotipo Caculadora de Medicamentos">
+                </a>
+				<h1 class="header__logo-title">Calculadora de Medicamentos</h1>
+			</div>
+            <section class="header__options">
+                <div class="header__configs">
+                    <p class="header__info-title">Configurações</p>
+                    <button class="header__button"><img src="images/config.png" alt="" class="header__button-image"></button>
+                </div>
+                <div class="header__theme">
+                    <p class="header__info-title">Modo Escuro</p>
+                    <div class="header__theme-toggle">
+                        <input id="switch" type="checkbox" name="theme">
+                        <label for="switch"></label>
+                    </div>
+                </div>
+                <div class="header__logout">
+                    <p class="header__info-title">Sair</p>
+                    <a href="index.html">
+                        <button class="header__button"><img src="images/logout.png" alt="" class="header__button-image"></button>
+                    </a>
+                </div>
+            </section>
+		</header>
+        <main>
+            <section class="main__infos">
+                <form class="main__infos-form" action="">
+                    <fieldset class="main__infos-form-field">
+
+                        <label for="setor" class="main__infos-form-title">Setor</label>
+                        <input type="text" id="setor" name="setor" list="setores" class="main__infos-form-options">
+                        <datalist id="setores">
+                            <option>Farmacia Central</option>
+                            <option>Farmacia Pronto Atendimento</option>
+                            <option>Farmacia Centro Cirurgico</option>
+                        </datalist>
+
+                        <label for="paciente" class="main__infos-form-title">Nome do Paciente</label>
+                        <input type="text" id="paciente" name="paciente" list="pacientes" class="main__infos-form-options">
+                        <datalist id="pacientes">
+                            <option>João Augusto</option>
+                            <option>Daniel Ferreira</option>
+                            <option>Rafael Gustavo</option>
+                        </datalist>
+
+                        <label for="administracao" class="main__infos-form-title">Forma de Administração do Medicamento</label>
+                        <input type="text" id="administracao" name="administracao" list="administracoes" class="main__infos-form-options">
+                        <datalist id="administracoes">
+                            <option>Intra Venoso</option>
+                            <option>Intra Muscular</option>
+                            <option>Oral</option>
+                        </datalist>
+
+                        <label for="medicamento" class="main__infos-form-title">Medicamentos</label>
+                        <input type="text" id="medicamento" name="medicamento" list="medicamentos" class="main__infos-form-options">
+                        <datalist id="medicamentos">
+                            <option>Med 1</option>
+                            <option>Antibiótico 1</option>
+                            <option>Med 2</option>
+                        </datalist>
+
+                        <label for="marca" class="main__infos-form-title">Marca e Apresentação do Medicamento</label>
+                        <input type="text" id="marca" name="marca" list="marcas" class="main__infos-form-options">
+                        <datalist id="marcas">
+                            <option>Marca 1</option>
+                            <option>Marca 2</option>
+                            <option>Marca 3</option>
+                        </datalist>
+
+                    </fieldset>
+                    <div class="main__infos-form-inputs">
+                        <label for="quantity" class="main__infos-form-title">Quantidade Prescrita em MG</label>
+                        <input type="text" name="quantity" id="quantity" class="main__infos-form-options" placeholder="0.00">
+                        <h2 class="error">Quantidade inválida!</h2>
+                        <label for="weight" class="main__infos-form-title">Peso do Paciente em KG </label>
+                        <input type="text" name="weight" id="weight" class="main__infos-form-options" placeholder="0.00">
+                        <h2 class="error">Peso inválido!</h2>
+                    </div>
+                </form>
+                <div class="main__infos-buttons">
+                    <button class="main__infos-button-calc button">Calcular</button>
+                    <a href="history.html">
+                        <button class="main__infos-button-history button">Verificar histórico de Pacientes</button>
+                    </a>
+                </div>
+            </section>
+            <section class="resultados">
+                <form action="" class="resultados__form">
+                    <h2 class="resultados__form-title">Reconstituição do Pó (1º diluição)</h2>
+                    <label class="resultados__form-checkbox"><input type="checkbox" > Diluir o pó com 2ml e misturar</label>
+                    <h2 class="resultados__form-title">Modo de Preparo (2º diluição)</h2>
+                    <label class="resultados__form-checkbox"><input type="checkbox" > Em seringa de 20ml, aspirar 2ml do pó diluído e completar com 18ml SF</label>
+                    <h2 class="resultados__form-title">Resultado</h2>
+                    <label class="resultados__form-checkbox"><input type="checkbox" > Resultado da regra de diluição: 5.34ml</label>
+                    <label class="resultados__form-checkbox"><input type="checkbox" > É necessário adicionar a permeabilização ao resultado</label>
+                    <div class="resultados__form-finish">
+                        <button class="resultados__form-button button">Concluir</button>
+                        <h3 class="resultados__form-registry">Registro salvo com sucesso!</h3>
+                    </div>
+                </form>
+            </section>
+        </main>
+    </body>
+</html>
