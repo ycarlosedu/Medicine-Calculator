@@ -18,6 +18,7 @@ body{
     background-color: var(--bg-white);
     width: 80%;
     margin: 0 auto;
+    transition: 0.5s;
 }
 
 body.dark{
@@ -27,81 +28,9 @@ body.dark{
     --bg-gray: #929496; 
 }
 
-/* CABEÇALHO INDEX */
-
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* CABEÇALHO - LOGO E NOME */
-
-.header__logo{
-    display: flex;
-    align-items: center;
-}
-
-.header__logo-img{
-    width: 50px;
-}
-
-.header__logo-title{    
-    margin-left: 1em;
-    color: var(--blue);
-    font-size: 2em;
-    font-weight: bold;
-    line-height: 2.4em;
-}
-
-/* CABEÇALHO - ADICIONAIS */
-
-.header__theme{
-	display: flex;
-	align-items: center;
-}
-
-.header__info-title{
-    color: var(--dark-gray);
-    font-weight: bold;
-}
-
-#switch[type=checkbox]{
-    height: 0;
-    width: 0;
-    visibility: hidden;
-}
-
-.header__theme-toggle label {
-    cursor: pointer;
-    text-indent: -9999px;
-    width: 44px;
-    height: 22px;
-    background: var(--gray);
-    float: right;
-    border-radius: 100px;
-    position: relative;
-}
-
-.header__theme-toggle label::after{
-    content: '';
-    position: absolute;
-    top: 3px;
-    left: 3px;
-    width: 15px;
-    height: 15px;
-    background-color: var(--white);
-    border-radius: 90px;
-    transition: 0.3s;
-}
-
-#switch:checked + label {
-    background-color: var(--blue);
-}
-
-#switch:checked + label::after {
-    left: calc(100% - 5px);
-    transform: translateX(-100%);
+.invisible{
+    display: none;
+    opacity: 0;
 }
 
 /* MAIN */
@@ -182,6 +111,10 @@ header{
     margin-left: 0.5em;
 }
 
+.main__login-error-link:hover, .main__login-error-link:focus{
+    text-decoration: underline;
+}
+
 .main__login-enter{
     display: flex;
     align-items: center;
@@ -198,13 +131,13 @@ header{
     transition: 0.3s;
 }
 
-button:hover, button:focus {
+.button:hover, .button:focus {
     cursor: pointer;
     opacity: 0.8;
-    transform: scale(1.1);
+    transform: scale(1.02);
 }
 
-button:hover > .button-icon{
+.button:hover > .button-icon{
         transform: translateX(50%);
 }
 
@@ -215,21 +148,6 @@ button:hover > .button-icon{
 }
 
 @media screen and (max-width:760px){
-    header{
-        margin-top: 1em;
-    }
-
-    .header__logo-title{
-        font-size: 1.5em;
-        line-height: 1em;
-    }
-
-    .header__theme{
-        position: absolute;
-        right: 1em;
-        top: 15%;
-    }
-    
     .main__content{
         justify-content: center;
         height: 70vh;
@@ -242,6 +160,4 @@ button:hover > .button-icon{
     .main__img{
         display: none;
     }
-
-
 }

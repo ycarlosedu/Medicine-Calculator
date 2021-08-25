@@ -1,116 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Histórico de Pacientes</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Histórico de Pacientes</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/header.css">
-    <link rel="stylesheet" href="styles/calculadora.css">
-    <link rel="stylesheet" href="styles/history.css">
+        <!-- CSS -->
+        <link rel="stylesheet" href="styles/reset.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/calculadora.css">
+        <link rel="stylesheet" href="styles/history.css">
 
-    <!-- SCRIPTS -->
-    <script src="scripts/theme.js" defer></script>
-    <script src="scripts/history.js" defer></script>
-    <script src="scripts/modal-history.js" defer></script>
+        <!-- SCRIPTS -->
+        <script src="scripts/history.js" defer></script>
+        <script src="scripts/modal-history.js" defer></script>
+        <script src="scripts/theme.js" defer></script>
 
-</head>
-<body>
-    <header>
-        <div class="header__logo">
-            <a href="calculadora.html">
-                <img class="header__logo-img" src="images/calculator icon.png" alt="Logotipo Caculadora de Medicamentos">
-            </a>
-            <h1 class="header__logo-title">Calculadora de Medicamentos</h1>
-        </div>
-        <section class="header__options">
-            <div class="header__configs">
-                <p class="header__info-title">Configurações</p>
-                <button class="header__button"><img src="images/config.png" alt="" class="header__button-image"></button>
-            </div>
-            <div class="header__theme">
-                <p class="header__info-title">Modo Escuro</p>
-                <div class="header__theme-toggle">
-                    <input id="switch" type="checkbox" name="theme">
-                    <label for="switch"></label>
-                </div>
-            </div>
-            <div class="header__logout">
-                <p class="header__info-title">Sair</p>
-                <a href="index.html">
-                    <button class="header__button"><img src="images/logout.png" alt="" class="header__button-image"></button>
+    </head>
+    <body>
+        <header>
+            <div class="header__logo">
+                <a class="header__logo-link" href="calculadora.html">
+                    <img class="header__logo-img" src="images/calculator.png" alt="Logotipo Caculadora de Medicamentos">
+                    <h1 class="header__logo-title">Calculadora de Medicamentos</h1>
                 </a>
             </div>
-        </section>
-    </header>
-    <main>
-        <form class="main__infos-form" action="">
-            <fieldset class="main__infos-form-field">
-                <label for="paciente" class="main__infos-form-title">Nome do Paciente</label>
-                    <input type="text" id="paciente" name="paciente" list="pacientes" class="main__infos-form-options">
-                    <datalist id="pacientes">
-                        <option>João Augusto</option>
-                        <option>Daniel Ferreira</option>
-                        <option>Rafael Gustavo</option>
-                    </datalist>
-            </fieldset>
-            <button class="main__infos-button-verify button">Verificar</button>
-        </form>
-        <section class="main__history">
-            <div class="main__history-registry">
-                <p id="main__history-date" class="main__history-info">Data:</p>
-                <p id="main__history-employee" class="main__history-info">Funcionário:</p>
-                <p id="main__history-weight" class="main__history-info">Peso Paciente:</p>
-                <p id="main__history-medicament" class="main__history-info">Medicamento:</p>
-                <p id="main__history-adm" class="main__history-info">Forma de Adm:</p>
-                <p id="main__history-brand" class="main__history-info">Marca:</p>
-                <p id="main__history-quantity" class="main__history-info">Quantidade Prescrita:</p>
-                <button class="main__infos-button-verify history button">Verificar Solução</button>
-            </div>
-            <div class="main__history-registry">
-                <p id="main__history-date" class="main__history-info">Data:</p>
-                <p id="main__history-employee" class="main__history-info">Funcionário:</p>
-                <p id="main__history-weight" class="main__history-info">Peso Paciente:</p>
-                <p id="main__history-medicament" class="main__history-info">Medicamento:</p>
-                <p id="main__history-adm" class="main__history-info">Forma de Adm:</p>
-                <p id="main__history-brand" class="main__history-info">Marca:</p>
-                <p id="main__history-quantity" class="main__history-info">Quantidade Prescrita:</p>
-                <button class="main__infos-button-verify button">Verificar Solução</button>
-            </div>
-            <div class="main__history-registry">
-                <p id="main__history-date" class="main__history-info">Data:</p>
-                <p id="main__history-employee" class="main__history-info">Funcionário:</p>
-                <p id="main__history-weight" class="main__history-info">Peso Paciente:</p>
-                <p id="main__history-medicament" class="main__history-info">Medicamento:</p>
-                <p id="main__history-adm" class="main__history-info">Forma de Adm:</p>
-                <p id="main__history-brand" class="main__history-info">Marca:</p>
-                <p id="main__history-quantity" class="main__history-info">Quantidade Prescrita:</p>
-                <button class="main__infos-button-verify button">Verificar Solução</button>
-            </div>
-        </section>
-        <section class="modal__wrapper ">
-            <div class="modal">
-                    <form action="" class="resultados__form">
-                        <h2 class="resultados__form-title">Reconstituição do Pó (1º diluição)</h2>
-                        <label class="resultados__form-checkbox"><input type="checkbox" > Diluir o pó com 2ml e misturar</label>
-                        <h2 class="resultados__form-title">Modo de Preparo (2º diluição)</h2>
-                        <label class="resultados__form-checkbox"><input type="checkbox" > Em seringa de 20ml, aspirar 2ml do pó diluído e completar com 18ml SF</label>
-                        <h2 class="resultados__form-title">Resultado</h2>
-                        <label class="resultados__form-checkbox"><input type="checkbox" > Resultado da regra de diluição: 5.34ml</label>
-                        <label class="resultados__form-checkbox"><input type="checkbox" > É necessário adicionar a permeabilização ao resultado</label>
-                        <div class="resultados__form-finish">
-                            <button class="modal-cancel button">Cancelar</button>
-                            <button class="resultados__form-button button">Concluir</button>
-                            <h3 class="resultados__form-registry">Registro salvo com sucesso!</h3>
-                        </div>
-                    </form>
-            </div>
-        </section>
+            
+            <nav class="header__menu">
+                    <ul class="header__menu-items">
+                        <li><a class="header__menu-item" href="./calculadora.html">Calculadora</a></li>
+                        <li><a class="header__menu-item" href="./history.html">Histórico de Pacientes</a></li>
+                    </ul>
+            </nav>
 
-    </main>
-</body>
+            <section class="header__options">
+                    <ul>
+                        <li class="header__option configs">
+                            <label for="configs"  class="header__info-title">Configurações</label>
+                            <button id="configs" class="header__button" data-configs><img src="images/config.png" alt="" class="header__button-image"></button>
+                        </li>
+                        <li class="header__option theme">
+                            <label for="switch" class="header__info-title">Modo Escuro</label>
+                            <input id="switch" type="checkbox" name="theme">
+                            <label for="switch" id="toggle">Modo Escuro</label>
+                        </li>
+                        <li class="header__option logout">
+                            <label for="logout" class="header__info-title">Fazer Logoff</label>
+                            <a href="index.html">
+                                <button id="logout" class="header__button" data-logout><img src="images/logout.png" alt="" class="header__button-image"></button>
+                            </a>
+                        </li>
+                    </ul>
+            </section>
+        </header>
+        <main>
+            <form class="main__infos-form" action="">
+                <fieldset class="main__infos-form-field">
+                    <legend for="paciente" class="main__infos-form-title">Nome do Paciente</legend>
+						<select id="paciente" class="main__infos-form-options" data-pacientes>
+								<option disabled selected>Selecione o Paciente</option>
+                                <option>Rafael Matheus</option>
+								<option>Matheus Rodrigues</option>
+								<option>Rodrigo Maranhão</option>
+						</select>
+                </fieldset>
+                <button class="main__infos-button-verify button" data-button="history">Verificar</button>
+            </form>
+            <section class="main__history" data-history>
+                <div class="main__history-registry">
+                    <p id="main__history-date" class="main__history-info">Data:</p>
+                    <p id="main__history-employee" class="main__history-info">Funcionário:</p>
+                    <p id="main__history-weight" class="main__history-info">Peso Paciente:</p>
+                    <p id="main__history-medicament" class="main__history-info">Medicamento:</p>
+                    <p id="main__history-adm" class="main__history-info">Forma de Adm:</p>
+                    <p id="main__history-brand" class="main__history-info">Marca:</p>
+                    <p id="main__history-quantity" class="main__history-info">Quantidade Prescrita:</p>
+                    <button class="main__infos-button-verify history button" data-button="verifyHistory">Verificar Solução</button>
+                </div>
+                <div class="main__history-registry">
+                    <p id="main__history-date" class="main__history-info">Data:</p>
+                    <p id="main__history-employee" class="main__history-info">Funcionário:</p>
+                    <p id="main__history-weight" class="main__history-info">Peso Paciente:</p>
+                    <p id="main__history-medicament" class="main__history-info">Medicamento:</p>
+                    <p id="main__history-adm" class="main__history-info">Forma de Adm:</p>
+                    <p id="main__history-brand" class="main__history-info">Marca:</p>
+                    <p id="main__history-quantity" class="main__history-info">Quantidade Prescrita:</p>
+                    <button class="main__infos-button-verify history button" data-button="verifyHistory">Verificar Solução</button>
+                </div>
+                <div class="main__history-registry">
+                    <p id="main__history-date" class="main__history-info">Data:</p>
+                    <p id="main__history-employee" class="main__history-info">Funcionário:</p>
+                    <p id="main__history-weight" class="main__history-info">Peso Paciente:</p>
+                    <p id="main__history-medicament" class="main__history-info">Medicamento:</p>
+                    <p id="main__history-adm" class="main__history-info">Forma de Adm:</p>
+                    <p id="main__history-brand" class="main__history-info">Marca:</p>
+                    <p id="main__history-quantity" class="main__history-info">Quantidade Prescrita:</p>
+                    <button class="main__infos-button-verify history button" data-button="verifyHistory">Verificar Solução</button>
+                </div>
+            </section>
+            <section class="modal__wrapper " data-modal>
+                <div class="modal">
+                    <div class="resultados" data-results>
+                        <h2 class="resultados__title">Reconstituição do Pó (1º diluição)</h2>
+                        <p class="resultados__text"> Diluir o pó com 2ml e misturar</p>
+                        <h2 class="resultados__title">Modo de Preparo (2º diluição)</h2>
+                        <p class="resultados__text"> Em seringa de 20ml, aspirar 2ml do pó diluído e completar com 18ml SF</p>
+                        <h2 class="resultados__title">Resultado</h2>
+                        <p class="resultados__text"> Resultado da regra de diluição: 5.34ml</p>
+                        <p class="resultados__text"> É necessário adicionar a permeabilização ao resultado</p>
+                        
+                        <button class="modal-cancel button" data-button="fecharModal">Fechar</button>
+                        <!-- <button class="resultados__button button">Concluir</button> -->
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>

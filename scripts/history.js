@@ -1,6 +1,6 @@
-var pacientHistory = document.querySelector(".main__history");
+var pacientHistory = document.querySelector("[data-history]");
 
-var verifyHistory = document.querySelector(".main__infos-button-verify");
+var verifyHistory = document.querySelector("[data-button=history]");
 
 verifyHistory.addEventListener("click", (event)=>{
     event.preventDefault();

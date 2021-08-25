@@ -51,6 +51,7 @@
     background-color: rgba(4,9,17,0.8);
     visibility: hidden;
     opacity: 0;
+    transition: 0.2s;
 }
 
 .modal{
@@ -63,8 +64,7 @@
 }
 
 .modal-cancel{
-    /* position: absolute;
-    right: 20%; */
+    margin-top: 2em;
     width: 15%;
     font-size: 1.5em;
     background-color: var(--dark-gray);
@@ -73,6 +73,10 @@
 
 
 @media screen and (max-width:760px){
+    .main__infos-form{
+        flex-direction: column;
+    }
+
     .main__history-registry{
         flex-direction: column;
     }
@@ -87,7 +91,8 @@
 
     .modal{
         width: 80%;
-        font-size: 0.7em;
+        height: 80%;
+        font-size: 1em;
     }
 
     .modal-cancel{

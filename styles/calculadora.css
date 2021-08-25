@@ -1,9 +1,5 @@
 /* MAIN */
 
-.main__infos-form{
-    display: flex;
-}
-
 .main__infos-form-field{
     width: 50%;
 }
@@ -22,63 +18,60 @@
     border-radius: 7px;
     border: 2px solid var(--gray);
     color: var(--fonts);
+    transition: 0.5s;
 }
 
 .main__infos-form-inputs{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 30%;
+}
+
+#quantity:out-of-range{
+    border-color: var(--red);
 }
 
 .error{
     font-size: 1.2rem;
 }
 
-.main__infos-buttons{
-    width: 60%;
-    margin: 2em auto;
-    display: flex;
-    justify-content: space-evenly;
+.main__infos-button{
+    width: 30%;
+    margin: 1em;
     font-size: 1.5em;
 }
 
-.main__infos-button-calc {
-    width: 30%;
-}
-
-.main__infos-button-history{
-    width: 100%;
+.bg{
+    position: absolute;
+    z-index: -1;
+    right: 5%;
+    opacity: 0.4;
 }
 
 /* RESULTADO */
 
-.resultados{
+.resultados.invisible{
     display: none;
 }
 
-.resultados.active{
-    display: block;
-}
-
-.resultados__form-title, .resultados__form-registry{
+.resultados__title, .resultados__registry{
     font-size: 3em;
     color: var(--dark-gray);
     margin: 0.5em 0;
 }
 
-.resultados__form-checkbox{
+.resultados__text:before{
+    content: "✔";
+}
+
+.resultados__text{
     font-size: 2em;
     line-height: 1.5em;
     display: block;
     color: var(--fonts);
 }
 
-.resultados__form-finish{
-    display: flex;
-    align-items: center;
-}
-
-.resultados__form-button{
+.resultados__button{
     margin: 2em auto;
     font-size: 1.5em;
     width: 25%;
@@ -87,45 +80,46 @@
 @media screen and (max-width:760px){
     header {
         flex-direction: column;
-        /* height: 22vh; */
         margin-bottom: 2em;
     }
 
-    .header__options{
-        margin-top: 1em;
+    .header__menu-items{
+        margin: 0.5em 0;
+        display: flex;
+        justify-content: flex;
     }
 
-    .header__theme{
+    .header__option.theme{
         position: initial;
     }
 
-    .main__infos{
-        flex-direction: column;
+    .bg{
+        display: none;
     }
 
-    .main__infos-form{
-        flex-direction: column;
-        box-sizing: border-box;
+    .main__infos-form-inputs{
+        width: 100%;   
+    }
+
+    .main__infos-form-options{
+        width: 100%;
+    }
+
+    .main__infos-form-inputs > #quantity{
+        width: 30%;
+        padding: 7px;
     }
 
     .main__infos-form-field{
         width: 100%;
     }
 
-    .main__infos-buttons{
-        flex-direction: column;
-    }
-
-    .main__infos-buttons, .resultados__form-button{
+    .main__infos-button{
+        margin: 1em 0 2em 0;
         width: 100%;
-    }
-
-    .main__infos-button-calc{
-        margin-bottom: 1em;
     }
 
     .resultados__form-registry{
         margin: 0.5em 0.5em;
     }
-
 }

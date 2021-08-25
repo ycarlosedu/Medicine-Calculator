@@ -8,24 +8,24 @@
 
 		<!-- CSS -->
 		<link rel="stylesheet" href="styles/reset.css">
+		<link rel="stylesheet" href="styles/header.css">
 		<link rel="stylesheet" href="styles/main.css">
 
 		<!-- SCRIPTS -->
+		<script src="scripts/login.js" defer></script>
 		<script src="scripts/theme.js" defer></script>
 
 	</head>
 	<body>   
 		<header>
 			<div class="header__logo">
-				<img class="header__logo-img" src="images/calculator icon.png" alt="Logotipo Caculadora de Medicamentos">
+				<img class="header__logo-img" src="images/calculator.png" alt="Logotipo Caculadora de Medicamentos">
 				<h1 class="header__logo-title">Calculadora de Medicamentos</h1>
 			</div>
-			<div class="header__theme">
-				<p class="header__info-title">Modo Escuro</p>
-				<div class="header__theme-toggle">
-					<input id="switch" type="checkbox" name="theme">
-					<label for="switch"></label>
-				</div>
+			<div class="header__option theme">
+				<label for="switch" class="header__info-title">Modo Escuro</label>
+				<input id="switch" type="checkbox" name="theme">
+				<label for="switch" id="toggle">Modo Escuro</label>
 			</div>
 		</header>
 		<main>
@@ -38,15 +38,19 @@
 					<form class="main__login" action="calculadora.html">
 						<label for="input-user" class="main__login-info">Usuário</label>
 						<input id ="input-user" type="text" class="main__login-input" placeholder="Insira seu suário">
-						<h2 class="error">Não foi possível conectar-se utilizando este usuário ou senha!</h2>
+						
+						<h2 class="error invisible">Não foi possível conectar-se utilizando este usuário ou senha!</h2>
+						
 						<label for="input-pass" class="main__login-info">Senha</label>
 						<input id="input-pass" type="password" class="main__login-input" placeholder="Insira sua senha">
+						
 						<div class="main__login-error">
-							<img src="images/error icon.png" alt="" class="main__login-error-image">
+							<img src="images/error.png" alt="" class="main__login-error-image">
 							<a href="#" class="main__login-error-link">Algum problema para acessar?</a>
 						</div>
+
 						<div class="main__login-enter">
-							<button class="main__login-enter-button button">
+							<button class="main__login-enter-button button" data-button="login">
 							<img class="button-icon" src="images/login.png" alt="">
 							Entrar</button>
 						</div>

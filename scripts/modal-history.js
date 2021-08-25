@@ -1,13 +1,11 @@
-var modal = document.querySelector(".modal__wrapper");
-var verify = document.querySelectorAll(".main__infos-button-verify.history");
+var modal = document.querySelector("[data-modal]");
+var verifies = document.querySelectorAll("[data-button=verifyHistory]");
 
-for (var i = 0; i < verify.length; i++) {
-    verify[i].addEventListener("click", ()=>{
-        modal.classList.add("active");
-    })
-};
+verifies.forEach(verify => verify.addEventListener("click", ()=>{
+    modal.classList.add("active");
+}))
 
-var cancel = document.querySelector(".modal-cancel");
+var cancel = document.querySelector("[data-button=fecharModal]");
 
 cancel.addEventListener("click", (event)=>{
     event.preventDefault();
